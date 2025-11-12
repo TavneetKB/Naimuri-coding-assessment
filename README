@@ -3,13 +3,16 @@
 [![Python Version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-This Jupyter notebook pre-processes, analyzes, and forecasts confirmed, deaths, and recovered cases of COVID-19 in 2020. It provides interactive visualizations to explore trends and applies time series forecasting models to predict future cases. This notebook uses Python version 3.11.9.
+This Jupyter notebook pre-processes, analyzes, and forecasts confirmed, deaths, and recovered cases of COVID-19 in 2020. 
+It provides interactive visualizations to explore trends and applies time series forecasting models to predict future cases.
+This notebook uses Python version 3.11.9.
 
 ---
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Directory] (#directory)
 - [Dataset](#dataset)
 - [Models](#models)
 - [Results](#results)
@@ -23,10 +26,11 @@ This Jupyter notebook pre-processes, analyzes, and forecasts confirmed, deaths, 
  git clone https://github.com/TavneetKB/Naimuri-coding-assessment.git
 ```
 
-2. Install dependencies:
+2. Install dependencies, ensure you are in root directory:
 ```bash
 poetry install
  ```
+3.
 
 ---
 
@@ -35,6 +39,31 @@ To run the project, use the following command:
 ```bash
 jupyter notebook
 ```
+
+---
+
+## Directory
+
+covid19-forecasting/
+│
+├── datasets/
+│ ├── covid_19_data_2020.csv
+│ └── time-series-19-covid-combined.csv
+│
+├── input/
+│ └── regions.json
+│
+├── models/
+│ ├── garch_lstm_covid_model.h5
+│ └── lstm_covid_model.h5
+│
+├── notebook/
+│ └── Technical_Challenge_Answer.ipynb
+│
+├── README.md
+├── poetry.lock
+├── pyproject.toml
+└── Senior Data Scientist - Technical Challenge.pdf
 
 ---
 
