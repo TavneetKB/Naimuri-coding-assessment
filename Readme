@@ -1,4 +1,4 @@
-# COVID-19 Forecasting 📊
+# COVID-19 Forecasting
 
 [![Python Version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -27,9 +27,37 @@ This Jupyter notebook pre-processes, analyzes, and forecasts confirmed, deaths, 
 ```bash
 pip install -r requirements.txt
  ```
+
+---
+
  ## Usage
 To run the project, use the following command:
 ```bash
 jupyter notebook
 ```
 
+---
+
+## Dataset
+The datasets used in this notebook are:
+- covid_19_data_2020.csv — used for analysis and training of the models.
+- time-series-19-covid-combined.csv — used for model validation.
+
+Both datasets are stored in the data folder.
+
+The data includes country-level daily confirmed cases, deaths, and recovered counts. Some preprocessing is applied to handle missing values, differences in start dates between countries, and zero-case days.
+
+---
+
+## Models
+The notebook implements the following forecasting models:
+- LSTM: Two LSTM layers with Dropout layers after each LSTM, followed by a Dense layer. The Dense layer uses a ReLU activation to ensure predictions remain non-negative.
+- GARCH-LSTM: Combines a GARCH model to capture volatility in daily changes with an LSTM for forecasting. This model allows the neural network to account for periods of high variability in the data.
+
+Fully trained models are saved in the models directory for reuse.
+
+---
+
+## License
+
+This project is licensed under the MIT License — see the LICENSE file for details.
