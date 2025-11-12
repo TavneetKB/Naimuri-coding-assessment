@@ -30,7 +30,6 @@ This notebook uses Python version 3.11.9.
 ```bash
 poetry install
  ```
-3.
 
 ---
 
@@ -44,25 +43,34 @@ jupyter notebook
 
 ## Directory
 
-covid19-forecasting/
 │
 ├── datasets/
 │ ├── covid_19_data_2020.csv
 │ └── time-series-19-covid-combined.csv
 │
+├── example_deployment/
+│ ├── data/
+│ │ └── time_series_data/
+│ ├── model/
+│ │ ├── lstm_covid_model.h5
+│ │ └── scaler.pkl
+│ ├── src/lstm_covid_model/
+│ │ ├── init.py
+│ │ └── app.py
+│ ├── Dockerfile
+│ ├── poetry.lock
+│ ├── pyproject.toml
+│ └── README.md
+│
 ├── input/
 │ └── regions.json
-│
-├── models/
-│ ├── garch_lstm_covid_model.h5
-│ └── lstm_covid_model.h5
 │
 ├── notebook/
 │ └── Technical_Challenge_Answer.ipynb
 │
-├── README.md
 ├── poetry.lock
 ├── pyproject.toml
+├── README.md
 └── Senior Data Scientist - Technical Challenge.pdf
 
 ---
@@ -83,7 +91,19 @@ The notebook implements the following forecasting models:
 - LSTM: Two LSTM layers with Dropout layers after each LSTM, followed by a Dense layer. The Dense layer uses a ReLU activation to ensure predictions remain non-negative.
 - GARCH-LSTM: Combines a GARCH model to capture volatility in daily changes with an LSTM for forecasting. This model allows the neural network to account for periods of high variability in the data.
 
-Fully trained models are saved in the models directory for reuse.
+Fully trained models are saved in the lstm_covid_model/model directory for reuse.
+
+---
+
+## Input
+
+This contains a JSON file which has a dictionary of regions and countries that have been used for analysis and pre-processing, this avoids the use of large dictionary objects within the notebook.
+
+---
+
+## Example deployment
+
+This folder contains a simple implementation of a deployed LSTM model based on the notebook. It takes in the a country name and a forecast horizon, the interval of interest for forecasting, and returns the predicted confirmed cases for that country using the trained LSTM. Instructions for using this folder can be found in the README within this folder.
 
 ---
 
