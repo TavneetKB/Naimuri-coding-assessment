@@ -1,0 +1,26 @@
+[project]
+name = "lstm-covid-model"
+version = "0.1.0"
+description = "A Docker container for an API of the LSTM Covid-19 Forecast Model from the Notebook."
+authors = [
+    {name = "Tavneet-Bahia"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datetime (>=5.5,<6.0)",
+    "numpy (>=2.3.4,<3.0.0)",
+    "pandas (>=2.3.3,<3.0.0)",
+    "fastapi (>=0.121.1,<0.122.0)",
+    "pydantic (>=2.12.4,<3.0.0)",
+    "tensorflow (>=2.20.0,<3.0.0)",
+    "joblib (>=1.5.2,<2.0.0)",
+    "uvicorn (>=0.38.0,<0.39.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
