@@ -1,0 +1,35 @@
+# COVID-19 Forecasting 📊
+
+[![Python Version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
+This Jupyter notebook pre-processes, analyzes, and forecasts confirmed, deaths, and recovered cases of COVID-19 in 2020. It provides interactive visualizations to explore trends and applies time series forecasting models to predict future cases. This notebook uses Python version 3.11.9.
+
+---
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dataset](#dataset)
+- [Models](#models)
+- [Results](#results)
+- [License](#license)
+
+---
+
+## Installation
+1. Clone the repository:
+```bash
+ git clone https://github.com/TavneetKB/.git
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+ ```
+ ## Usage
+To run the project, use the following command:
+```bash
+jupyter notebook
+```
+
